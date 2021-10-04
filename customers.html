@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body onload="addElement()">
     <header>
         <nav id="header-nav" class="navbar navbar-default">
                 <div class="container">
@@ -74,76 +74,16 @@
               <tr>
                 <th scope="col">Account Number</th>
                 <th scope="col">Name</th>
+                <th scope="col">Email</th>
                 <th scope="col">Balance</th>
-                <th scope="col">Details</th>
+                <th scope="col">Transfer</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Nithin</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success" href = "transactionPage.html">Transfer</button></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Shanmugam</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success">Transfer</button></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Nithin S</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success">Transfer</button></td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Nithin</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success">Transfer</button></td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Nithin</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success">Transfer</button></td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Nithin</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success">Transfer</button></td>
-              </tr>
-              <tr>
-                <th scope="row">7</th>
-                <td>Nithin</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success">Transfer</button></td>
-              </tr>
-              <tr>
-                <th scope="row">8</th>
-                <td>Nithin</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success">Transfer</button></td>
-              </tr>
-              <tr>
-                <th scope="row">9</th>
-                <td>Nithin</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success">Transfer</button></td>
-              </tr>
-              <tr>
-                <th scope="row">10</th>
-                <td>Nithin</td>
-                <td>5000</td>
-                <td><button type="button" class="btn btn-success">Transfer</button></td>
-              </tr>
-
-            </tbody>
+            <tbody id = "tableBody"></tbody>
           </table>
         </div>
       </div>
+      <a href="transactionPage.html"><button onclick="greet(1)"></button></a>
       <footer class="panel-footer">
         <div class="container">
           <div class="row">
@@ -172,7 +112,7 @@
             </section>
           
       </footer>
-    
+    <script src="transc.js"></script>
       
 </body>
 </html>

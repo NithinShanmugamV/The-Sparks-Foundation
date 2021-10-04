@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     </head>
-    <body>
+    <body onload="trans()">
         <header>
             <nav id="header-nav" class="navbar navbar-default">
                     <div class="container">
@@ -67,7 +67,39 @@
                     </div>
              </nav>
         </header>
-          
+        <div id="main-content" class="container">
+          <div id="main" class="card card-body">
+            <h2 class="title">Transaction From</h2>
+            <div class="card card-body">
+              <form class="form-inline mb-3">
+                <h3>Account number</h3>
+                <input type="text" class="form-control mr-2 ml-" id="item" />
+                <br>
+                <h3>holder name</h3>
+                <input type="text" class="form-control mr-2" id="item" />
+              </form>
+            </div>
+ 
+            
+            <br><br>
+            <h2 class="title">Transaction To</h2>
+            <div class="card card-body">
+              <form class="form-inline mb-3">
+                <h3>Account number</h3>
+                <input type="text" class="form-control mr-2" id="item" />
+              </form>
+            </div>
+
+            <div class="card card-body">
+              <form id="addForm" class="form-inline mb-3">
+                <h3>Account holder name</h3>
+                <input type="text" class="form-control mr-2" id="item" />
+              </form>
+            </div> 
+          </div>
+          <br><br>
+          <input type="submit" class="btn btn-dark" value="Submit" />
+        </div>
           <footer class="panel-footer">
             <div class="container">
               <div class="row">
@@ -96,7 +128,9 @@
                 </section>
               
           </footer>
+        <script src="transc.js"></script>
         
           
     </body>
 </html>
+<!--<input type="submit" class="btn btn-dark" value="Submit" />-->
