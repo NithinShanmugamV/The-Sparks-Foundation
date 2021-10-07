@@ -3,6 +3,10 @@ const Schema = mongoose.Schema
 
 //create schema basically it is not but how your data is stored in database
 const CustomerSchema = new Schema({
+  account: {
+    type: Number,
+    required: true
+  },
   name: {
     type: String,
     required: true,

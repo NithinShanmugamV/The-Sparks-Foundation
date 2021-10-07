@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const config = require('config');
 
-const db = config.get('mongoURI');
+const db = config.get('mongoURI');// gets url from json
 
+//used to connect to db
 const connectDB = async() => {
     try{
         await mongoose.connect(db, {
