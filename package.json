@@ -1,12 +1,37 @@
 {
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^6.3.0",
+    "config": "^3.3.6",
     "express": "^4.17.1",
     "express-validator": "^6.12.2",
     "fs": "^0.0.1-security",
+    "gravatar": "^1.8.2",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.1.2",
     "mongoose": "^6.0.9",
     "require": "^2.4.20"
-  }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server"
+  },
+  "name": "the-sparks-foundation",
+  "description": "You can use the [editor on GitHub](https://github.com/NithinShanmugamV/The-Sparks-Foundation/edit/main/README.md) to maintain and preview the content for your website in Markdown files.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NithinShanmugamV/The-Sparks-Foundation.git"
+  },
+  "author": "Nithin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NithinShanmugamV/The-Sparks-Foundation/issues"
+  },
+  "homepage": "https://github.com/NithinShanmugamV/The-Sparks-Foundation#readme"
 }
