@@ -1,35 +1,37 @@
-// const express = require('express');
-// const connectDB = require('./config/db');
-// const app = express();
+//main entry file
 
-// //connect to database
-// connectDB();
-// //app.get('/', (req, res) => res.send('API Running'));
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => console.log(`Sever started on port ${PORT}`));
-// app.set('view engine','ejs');
-// app.get('/',(req,res) => {
-//     res.render('index');
-// });
+const express = require('express'); //include entry file
+const connectDB = require('./config/db');
+const app = express(); // initialize
 
-const express = require('express');
-const mongoose = require('mongoose');
-const customerRouter = require('./routes/customers');
-const transactionRouter = require('./routes/transaction');
-const addUserRouter = require('./routes/addUser');
-const app = express();
-mongoose.connect("mongodb+srv://nithin888:nithin888@cluster0.eky1s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
-    useNewUrlParser: true
-})
+//connect database
+connectDB();
+
+app.use( express.static( "public" ) );
+// Init Middleware
+app.use(express.json({extended: false}))// this should allow req.body to get data
+
+
 app.set('view engine','ejs');
-
-app.use('/customers',customerRouter);
-app.use('/transaction',transactionRouter);
-app.use('/addUser',addUserRouter);
-
-app.get('/',(req,res) => {
+app.use(express.urlencoded({extended:false})); // this line tells express that we use input from form and pass it to above route /api/transaction
+//including endpoint
+app.get('/', (req,res) => {
     res.render('index');
-    //res.send('Hello World');
 });
+//get runs at / and it has callback and if the request is accepted it sends API Running
 
-app.listen(5000);
+
+//Define routes
+app.use('/api/users' , require('./routes/api/users'));
+app.use('/api/customers' , require('./routes/api/customers'));
+app.use('/api/transaction' , require('./routes/api/transaction'));
+app.use('/api/history' , require('./routes/api/history'));
+app.use('/api/demo' , require('./routes/api/demo'));
+app.use('/api/balance' , require('./routes/api/balance'));
+
+
+
+const PORT = process.env.PORT || 5000; 
+// process.env.PORT it looks for environment variable in heroku if not runs in 5000
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
+//listen returns a callback if connected so we are printing server is running
