@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## THE SPARKS FOUNDATION Graduate Rotational Internship Program
 
-You can use the [editor on GitHub](https://github.com/NithinShanmugamV/The-Sparks-Foundation/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Web development task
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+TASK -1
 
-### Markdown
+Created a CRUD banking application that allows users to transfer money from one user to another user.
+Task assigned was as follows:
+1. Create a simple dynamic website which has the following specs.
+2. Start with creating a dummy data in database for upto 10 customers. Database options: Mysql, Mongo, Postgres, etc. Customers table will have basic fields such as name, email, current balance etc. Transfers table will record all transfers happened.
+3.Flow: Home Page > View all Customers > Select and View one Customer > Transfer Money > Select customer to transfer to > View all Customers.
+4. No Login Page. No User Creation. Only transfer of money between multiple users.
+5. Host the website.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Techstack Used: EJS, NodeJS, Express, MongoDB
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NithinShanmugamV/The-Sparks-Foundation/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Website is hosted at heroku: https://banking-site-nithin.herokuapp.com/
